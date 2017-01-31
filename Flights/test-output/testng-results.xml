@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[<font color='Black'>Value Expected value is trueRoundTrip is displayed</font></br>]]>
+    </line>
+    <line>
+      <![CDATA[<font color='Black'>Value Expected value is trueOne Way Booking Option displayed</font></br>]]>
+    </line>
+    <line>
+      <![CDATA[<font color='Black'>Value Expected value is trueRound Trip is by defauly selected</font></br>]]>
+    </line>
+    <line>
+      <![CDATA[<font color='Black'>Value Expected value is trueOne Way is selected</font></br>]]>
+    </line>
+    <line>
+      <![CDATA[<font color='Black'>Value Expected value is trueStart station is displayed</font></br>]]>
+    </line>
+    <line>
+      <![CDATA[<font color='Black'>Value Expected value is trueDestination  station is displayed</font></br>]]>
+    </line>
+    <line>
+      <![CDATA[<font color='Black'>Expected String:Actual String:Bangalore, India - Kempegowda International airport(BLR)Mesage:Default Text of start station must get matched</font></br>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="22541" started-at="2017-01-30T06:16:32Z" finished-at="2017-01-30T06:16:54Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="22541" started-at="2017-01-30T06:16:32Z" finished-at="2017-01-30T06:16:54Z">
+      <class name="test.TestFlightSearch">
+        <test-method status="PASS" signature="testValidation(common.Config)[pri:0, instance:test.TestFlightSearch@9629756]" name="testValidation" duration-ms="22497" started-at="2017-01-30T11:46:32Z" data-provider="GetTestConfig" finished-at="2017-01-30T11:46:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[common.Config@42dafa95]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<font color='Black'>Value Expected value is trueRoundTrip is displayed</font></br>]]>
+            </line>
+            <line>
+              <![CDATA[<font color='Black'>Value Expected value is trueOne Way Booking Option displayed</font></br>]]>
+            </line>
+            <line>
+              <![CDATA[<font color='Black'>Value Expected value is trueRound Trip is by defauly selected</font></br>]]>
+            </line>
+            <line>
+              <![CDATA[<font color='Black'>Value Expected value is trueOne Way is selected</font></br>]]>
+            </line>
+            <line>
+              <![CDATA[<font color='Black'>Value Expected value is trueStart station is displayed</font></br>]]>
+            </line>
+            <line>
+              <![CDATA[<font color='Black'>Value Expected value is trueDestination  station is displayed</font></br>]]>
+            </line>
+            <line>
+              <![CDATA[<font color='Black'>Expected String:Actual String:Bangalore, India - Kempegowda International airport(BLR)Mesage:Default Text of start station must get matched</font></br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testValidation -->
+      </class> <!-- test.TestFlightSearch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

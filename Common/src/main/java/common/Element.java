@@ -9,7 +9,7 @@ import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.lift.TestContext;
+
 
 /**
  * Wrapper class for organic method of Selenium to Support Logging as well

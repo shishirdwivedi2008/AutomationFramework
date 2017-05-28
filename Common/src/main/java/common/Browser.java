@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import org.apache.http.util.ExceptionUtils;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -16,6 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,7 +31,7 @@ import org.testng.Assert;
  */
 public class Browser {
 
-	private static Config Config;
+	private static common.Config Config;
 
 	/**
 	 * Method to open Browser
@@ -39,13 +41,19 @@ public class Browser {
 	 * @return {@link WebDriver}
 	 * @author shishir
 	 */
-	public static WebDriver openBrowser(Config testConfig) {
+	public static WebDriver openBrowser(common.Config testConfig) {
 		String browserName = testConfig.property.getProperty("Browser").toLowerCase();
 		switch (browserName) {
 		case "firefox":
-			FirefoxBinary binary = new FirefoxBinary(new File("/opt/firefox/firefox-sdk/bin/firefox"));
-			FirefoxProfile profile = new FirefoxProfile();
-			testConfig.driver = new FirefoxDriver(binary, profile);
+			FirefoxProfile geoDisabled = new FirefoxProfile();
+			geoDisabled.setPreference("geo.enabled", false);
+			geoDisabled.setPreference("geo.provider.use_corelocation", false);
+			geoDisabled.setPreference("geo.prompt.testing", false);
+			geoDisabled.setPreference("geo.prompt.testing.allow", false);
+			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+			capabilities.setCapability(FirefoxDriver.PROFILE, geoDisabled);
+			System.setProperty("webdriver.gecko.driver", "/home/shishir/Downloads/Software/geckodriver");
+			testConfig.driver = new FirefoxDriver(capabilities);
 			testConfig.driver.manage().window().maximize();
 			break;
 		case "chrome":

@@ -40,7 +40,8 @@ public class Config {
 
 		try {
 			property=new Properties();
-			InputStream input=new FileInputStream(new File("/home/shishir/workspace/Common/Config.properties"));
+			System.out.println(System.getProperty("user.dir"));
+			InputStream input=new FileInputStream(new File("/home/shishir/Project/AutomationFramework/Common/Config.properties"));
 			property.load(input);
 			logToStandardOut = (property.getProperty("logToStandardOut").equals("true")) ? true : false;
 		} catch (FileNotFoundException e) {
